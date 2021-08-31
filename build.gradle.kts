@@ -17,6 +17,7 @@ ext {
     set("logbackVersion", "1.2.1")
     set("ktorVersion", "1.4.0") // upgrade to 1.5 produces test errors
     set("serializationVersion", "1.2.1")
+    set("kGraphqlVersion", "0.17.14")
 }
 
 allprojects {
