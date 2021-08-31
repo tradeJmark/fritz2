@@ -11,5 +11,6 @@ include(
     "lenses-annotation-processor",
     "test-server",
     "styling",
-    "components"
+    "components",
+    "graphql-server"
 )
