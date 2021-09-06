@@ -9,14 +9,12 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
 fun main() {
-    embeddedServer(Netty, port = 5000, host = "127.0.0.1") {
+    embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
         install(GraphQL) {
+            // Enable the interactive web interface for testing:
             playground = true
-            schema {
-                query("hello") {
-                    resolver { -> "World" }
-                }
 
+            schema {
                 query("languages") {
                     resolver { -> TestProgrammingLanguageRepository.getAll() }
                 }
